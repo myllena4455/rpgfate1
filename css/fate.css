@@ -1,0 +1,292 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* Corpo da página */
+body {
+  font-family: "Verdana", sans-serif;
+  color: white;
+  overflow-x: hidden;
+}
+
+/* Cabeçalho */
+header {
+  background: #3a50b4; /* Azul topo */
+  text-align: center;
+  padding: 10px 0;
+}
+
+header h1 {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+/* Menu */
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  background: #2e3d8a; /* Azul nav */
+  padding: 5px 0;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Título central */
+.titulo-central {
+  text-align: center;
+  background: #2e3d8a; /* Azul faixa central */
+  padding: 10px;
+  margin: 20px auto 10px auto;
+  width: 60%;
+  border-radius: 15px;
+}
+
+.titulo-central h2 {
+  font-size: 26px;
+  font-weight: bold;
+}
+
+/* Abas */
+.abas {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 10px;
+}
+
+.abas a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Caixa de conteúdo */
+.conteudo {
+  background: #273686; /* Azul caixa */
+  padding: 20px;
+  border-radius: 15px;
+  width: 80%;
+  margin: 0 auto 60px auto;
+  text-align: justify;
+  font-size: 16px;
+  line-height: 1.6em;
+}
+.fundo-personalizado::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* Caminho relativo: css/fate.css -> imagem em img/img1.png é ../img/img1.png */
+  background-image: url('../img/img1.png');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.6;
+  z-index: -1;
+}
+ html {
+      scroll-behavior: smooth; /* faz a rolagem suave */
+    }
+
+
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      gap: 15px;
+    }
+
+    nav ul li a, .abas a {
+      text-decoration: none;
+      font-weight: bold;
+      color: black;
+    }
+
+    nav ul li a:hover, .abas a:hover {
+      text-decoration: underline;
+    }
+
+    .conteudo {
+      margin-top: 20px;
+    }
+
+    p {
+      padding: 10px;
+      border-radius: 5px;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    /* Quando o parágrafo for alvo */
+    p:target {
+      background: black;
+      color: white;
+    }
+    /* Ajustes para tablets (largura até 1024px) */
+@media (max-width: 1024px) {
+  .titulo-central {
+    width: 80%; /* mais largo no tablet */
+    font-size: 22px;
+  }
+
+  nav ul {
+    flex-wrap: wrap; /* se faltar espaço, os botões quebram linha */
+    gap: 10px;
+  }
+
+  .conteudo {
+    width: 90%; /* ocupa mais da tela */
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 22px;
+  }
+
+  nav ul {
+    flex-wrap: wrap;   /* continua em linha, mas quebra se faltar espaço */
+    justify-content: center;
+  }
+
+  nav ul li {
+    margin: 5px;
+  }
+
+  .titulo-central {
+    width: 95%;
+    font-size: 20px;
+    padding: 8px;
+  }
+
+  .conteudo {
+    width: 95%;
+    padding: 15px;
+    font-size: 14px;
+  }
+
+  .abas {
+    flex-wrap: wrap;   /* abas continuam em linha, mas quebram se necessário */
+    gap: 10px;
+  }
+
+  .abas a {
+    padding: 8px 12px;
+    border-radius: 10px;
+    background: #2e3d8a;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+ul {
+  list-style: none; /* tira as bolinhas da lista */
+  padding: 0;
+}
+
+ul li {
+  text-align: center;   /* centraliza imagem e texto */
+  margin: 20px 0;       /* espaço entre itens */
+}
+
+ul li img {
+  display: block;       /* força a imagem a ficar sozinha em uma linha */
+  margin: 0 auto 10px;  /* centraliza a imagem e dá espaço embaixo */
+  border-radius: 8px;   /* deixa cantos arredondados */
+}
+.back-to-top {
+    /* CHAVES DE POSICIONAMENTO (Mantenha) */
+    position: fixed; 
+    bottom: 30px; 
+    right: 30px; 
+    z-index: 1000;
+
+    /* CHAVES DE TAMANHO E FORMA (Mantenha) */
+    width: 50px;
+    height: 50px;
+    border-radius: 50%; 
+    background-color: #007bff; /* Cor para contraste */
+  
+    
+    /* 1. Alinha horizontalmente */
+    text-align: center; 
+    
+    /* 2. Alinha verticalmente (deve ser igual ao height) */
+    line-height: 50px; 
+    
+    /* 3. Garante que não haja espaço extra dentro do botão que cause desalinhamento */
+    padding: 0; 
+    
+    /* 4. Garante que a seta não seja cortada e a torna mais visível */
+    font-size: 30px; 
+    font-weight: 900; /* Deixa o símbolo mais grosso e centralizado visualmente */
+
+    /* Efetivamente, remove o alinhamento 'flex' se ele estiver atrapalhando */
+    display: block; 
+    
+    /* Outras correções */
+    color: white; 
+    text-decoration: none;
+    overflow: hidden; 
+}
+.titulo-secao {
+  /* Fundo preto que você deseja */
+  background-color: black;
+  
+  /* Cor do texto (muito importante!) */
+  color: white; 
+  
+  /* Garante que o título ocupe toda a largura */
+  display: block; 
+  
+  /* Espaçamento interno para a barra */
+  padding: 10px 15px; 
+  
+  /* Margem para separar o título do conteúdo que vem abaixo */
+  margin-bottom: 20px; 
+  
+  /* Centraliza ou alinha o texto */
+  text-align: center; /* ou left, se preferir */
+  
+  /* Remove a margem superior padrão do H2, se houver */
+  margin-top: 0; 
+}
+
+/* Garante que o texto dentro do título fique bem formatado */
+.titulo-secao span {
+  font-weight: bold;
+}
+
+
+
+footer{ 
+    background:#3a50b4;
+    color:white;
+    text-align:center;
+    padding:15px;
+    
+}
