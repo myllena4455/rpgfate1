@@ -11,6 +11,8 @@ body {
   font-family: "Verdana", sans-serif;
   color: white;
   overflow-x: hidden;
+ padding-top: 30px; /* compensa o espaço ocupado pelo menu fixo */
+
 }
 
 /* Cabeçalho */
@@ -20,11 +22,26 @@ header {
   padding: 10px 0;
 }
 
+
 header h1 {
   font-size: 32px;
   font-weight: bold;
 }
 
+
+nav {
+  background: #3a50b4; /* Azul topo */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999; /* garante que fique acima de outros elementos */
+}
+
+.titulo-central rt{
+  margin-top: 100px; /* ajuste conforme a altura do seu menu */
+
+}
 /* Menu */
 nav ul {
   display: flex;
@@ -32,7 +49,11 @@ nav ul {
   list-style: none;
   background: #2e3d8a; /* Azul nav */
   padding: 5px 0;
+  position: static;
+    top:0;
+    z-index: 9;
 }
+
 
 nav ul li {
   margin: 0 15px;
@@ -57,6 +78,7 @@ nav ul li a:hover {
   margin: 20px auto 10px auto;
   width: 60%;
   border-radius: 15px;
+ 
 }
 
 .titulo-central h2 {
@@ -280,9 +302,17 @@ ul li img {
 .titulo-secao span {
   font-weight: bold;
 }
-
-
-
+/*gifs pequnos*/
+.emoji-gif {
+  width: 24px;
+  height: 24px;
+  vertical-align: text-bottom; /* ou middle */
+  margin-right: 8px;
+  display: inline-block;
+}
+html{
+    scroll-behavior: smooth;
+}
 footer{ 
     background:#3a50b4;
     color:white;
