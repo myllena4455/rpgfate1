@@ -43,33 +43,45 @@ nav {
 
 }
 /* Menu */
-nav ul {
+.nav{
+    background-color: #150c91;
+    height: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999; /* garante que fique acima de outros elementos */
+}
+.nav h1{
+color: #000;
   display: flex;
-  justify-content: center;
-  list-style: none;
-  background: #2e3d8a; /* Azul nav */
-  padding: 5px 0;
-  position: static;
-    top:0;
-    z-index: 9;
+  justify-content: flex-end;
+  align-items: center;
+
+
 }
 
-
-nav ul li {
-  margin: 0 15px;
+.nav-list{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin-right: 20px;
+}
+.nav-list a{
+    padding: 20px;
+    text-decoration: none;
+    color: black
 }
 
-nav ul li a {
-  text-decoration: none;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
+.nav-list a:hover{
+    color: #f3e73b;
 }
-
-nav ul li a:hover {
-  text-decoration: underline;
+html{
+    scroll-behavior: smooth;
 }
-
 /* Título central */
 .titulo-central {
   text-align: center;
